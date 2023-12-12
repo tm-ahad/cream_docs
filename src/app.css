@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-item {
+    @apply bg-emerald-500 ml-[3%] block py-2 pr-4 pl-3 font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-200 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent;
+    transition: 414ms;
+}
+
+h1 {
+    @apply font-medium text-4xl
+}
+
+p {
+    @apply mt-1
+}
+
+.code {
+    @apply bg-[#16181d] text-white px-2 py-1 rounded-lg border-2 border-gray-500;
+}
+
+.code-zp {
+    @apply bg-code text-code-text rounded-lg border-2 border-gray-500;
+}
+
+.section {
+    margin: 2% 3% 0% 3%;
+}
