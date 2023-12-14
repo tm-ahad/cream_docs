@@ -9,7 +9,7 @@
         Firstly, You have to install cream on your computer
         You could do so by running this command
     </p>
-    <pre class="mt-[1.7%]"><code class="lang-shell code">$ curl https:<span class="hljs-regexp"></span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.bash | bash </code></pre>
+    <pre class="mt-[1.7%]"><code class="lang-shell code">$ curl https://<span class="hljs-regexp"></span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.bash | bash </code></pre>
     <p class="mt-opsp"><strong>Note</strong>: You&#39;ll have to run the command on a <a href="https://www.msys2.org/">msys</a> shell on windows to install cream.</p>
 </div>
 
