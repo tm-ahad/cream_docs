@@ -1,5 +1,6 @@
 <script lang="ts">
-    import Navbar from "../navbar.svelte";
+    import { stringify } from "postcss";
+import Navbar from "../navbar.svelte";
     const CONST = 'const'
 </script>
 <Navbar/>
@@ -10,6 +11,15 @@
         You could do so by running this command
     </p>
     <pre class="mt-[1.7%]"><code class="lang-shell code">$ curl https://<span class="hljs-regexp"></span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.bash | bash </code></pre>
+    <p class="mt-opsp"><strong>Note</strong>: You&#39;ll have to run the command on a <a href="https://www.msys2.org/">msys</a> shell on windows to install cream.</p>
+</div>
+
+<div class="section">
+    <h1>Updating cream</h1>
+    <p>
+        You could update cream by running this command
+    </p>
+    <pre class="mt-[1.7%]"><code class="lang-shell code">$ curl https://<span class="hljs-regexp"></span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/u</span>pdate.bash | bash </code></pre>
     <p class="mt-opsp"><strong>Note</strong>: You&#39;ll have to run the command on a <a href="https://www.msys2.org/">msys</a> shell on windows to install cream.</p>
 </div>
 
@@ -315,15 +325,70 @@ static_dir_render$/static_files
 ---------
         
 app &#123;
-    //printing id
-    console.log(name);
+    {CONST} handleClick = () => console.log("Lorem ipsum")
 
 
     &lt;temp&gt;
-        //generating id and saving it to variable name
-        &lt;div id=@gen_id:name;&gt;Lorem ipsum&lt;div&gt;
+        <code class="text-gray-500">//generating id and saving it to variable name</code>
+        &lt;div id=@gen:name;&gt;Lorem ipsum&lt;div&gt;
+        <code class="text-gray-500">//Template</code>
+        $dyn:name onclick=$handleClick
     &lt;/temp&gt;
 &#125;</code></pre>
+</div>
+
+<div class="section">
+    <h1>Form handling</h1>
+    <p>Example of form handling in cream (ts):</p>
+    <pre class="code mt-2 mb-3"><code>src/app.js
+----------
+import lib:get_by_name.ts
+import mod:src/api_client
+        
+app &#123;
+    {CONST} handleClick = () => console.log("Lorem ipsum")
+
+    <code class="text-gray-500">//selecting elements</code>
+    const name_tag = GetByName&lt;HTMLInputElement&gt;("name_tag")
+    const age_tag = GetByName&lt;HTMLInputElement&gt;("age")
+    const email_tag = GetByName&lt;HTMLInputElement&gt;("email")
+
+    <code class="text-gray-500">//Submit function</code>
+    const submit = () => &#123;
+        {CONST} name = name_tag.value;
+        {CONST} age = age_tag.value;
+        {CONST} email = email_tag.value;
+
+        {CONST} obj = &#123
+            name,
+            age,
+            email
+        &#125
+
+        console.table(obj);
+        <code class="text-gray-500">//Posting data to api</code>
+        ApiClient.post("/createUser", JSON.stringify(obj))
+    &#125
+
+    &lt;temp&gt;
+        &lt;p&gt;Name&lt;/p&gt;
+        &lt;input type="text" id=@gen:name_tag;/&gt;
+        &lt;p&gt;Age&lt;/p&gt;
+        &lt;input type="number" id=@gen:age;/&gt;
+        &lt;p&gt;Email&lt;/p&gt;
+        &lt;input type="email" id=@gen:email;/&gt;
+
+        &lt;button id="submit"&gt;Submit&lt;/button&gt;
+        $dyn:"submit" onclick=$submit;
+    &lt;/temp&gt;
+&#125;</code></pre>
+</div>
+
+<div class="section">
+    <pre class="code mt-2 mb-3"><code>src/api_client.mod.cts
+----------------------
+import lib:http_client.ts
+const ApiClient = new HttpClient("api-link")</code></pre>
 </div>
 
 <div class="section">
