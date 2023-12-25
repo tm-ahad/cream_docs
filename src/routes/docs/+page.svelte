@@ -392,6 +392,33 @@ const ApiClient = new HttpClient("api-link")</code></pre>
 </div>
 
 <div class="section">
+    <h1>Intregating tailwindcss</h1>
+    <h1 class="mt-2">Step 1 (Installation): </h1>
+    <p>To install tailwindcss you first have to install css. If your project is a node project</p>
+    <p>You could install tailwindcss by this command</p>
+    <pre class="code mt-2 mb-3"><code>npm install -D tailwindcss
+npx tailwindcss init </code></pre>
+
+    <h1>Step 2 (Configuration):</h1>
+    <p>You have to add this config to your config.dsp file</p>
+    <h2 class="font-semibold text-lg">Don't change or remove other config</h2>
+    <pre class="code mt-2 mb-3"><code>config.dsp
+----------
+pre_make$npx tailwindcss -i ./src/styles/style.css -o ./static/dist.css
+static_dir$/static
+static_dir_render$/static
+    </code></pre>
+    <p>After configuring config.dsp add this code to head_prefix.html</p>
+    <pre class="code mt-2 mb-3"><code>head_prefix.html
+----------------
+&ltlink href="/static/dist.css" rel="stylesheet"/&gt</code></pre>
+
+    <h2 class="text-lg font-semibold">
+        Build your project then serve it & Voila tailwindcss intregated with cream
+    </h2>
+</div>
+
+<div class="section">
     <h1>Npm packages</h1>
     <p>Example of importing npm package in cream:</p>
     <pre class="code mt-2 mb-3"><code>src/app.js
