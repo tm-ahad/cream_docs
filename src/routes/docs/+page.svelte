@@ -1,6 +1,5 @@
 <script lang="ts">
-    import { stringify } from "postcss";
-import Navbar from "../navbar.svelte";
+    import Navbar from "../navbar.svelte";
     const CONST = 'const'
 </script>
 <Navbar/>
@@ -37,7 +36,7 @@ import Navbar from "../navbar.svelte";
         After building the compiled html will be saved into /build/index.html (default)
         To build a cream project you can run:
     </p>
-    <pre class="mt-[1.7%]"><code class="lang-shell code">$ cream build </code></pre>
+    <pre class="mt-[1.7%]"><code class="lang-shell code">$ cream make </code></pre>
 </div>
 
 <div class="section">
