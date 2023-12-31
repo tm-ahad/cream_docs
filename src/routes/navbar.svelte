@@ -23,7 +23,8 @@
 			</div>
 			<a href="/" class="nav-item">Home</a>
 			<a href="/docs" class="nav-item">Docs</a>
-			<a href="/about" class="nav-item" >About</a>	
+			<a href="/about" class="nav-item" >About</a>
+			<a href="/stdlib" class="nav-item" >Standard library</a>	
 		</div>
 	</nav>
 </body>

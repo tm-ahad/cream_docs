@@ -72,7 +72,7 @@ app &#123;
     <div>
         <pre class="code mt-2 mb-3"><code>src/app.js
 ----------
-<code class="text-gray-500">/*It is depended if your project is in js import 'make_string' or if it's ts import 'make_string_ts'
+<code class="text-gray-500">/*It is depended if your project is in js import 'map_concat.js' or if it's ts import 'map_concat.ts'
 Same for every lib*/</code>
 
 import lib:map_concat.js
