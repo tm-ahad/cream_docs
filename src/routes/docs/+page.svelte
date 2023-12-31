@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Navbar from "../navbar.svelte";
+    import Navbar from "../components/navbar.svelte";
     const CONST = 'const'
 </script>
 <Navbar/>
