@@ -19,8 +19,16 @@ p {
     @apply mt-1
 }
 
+.link {
+    @apply text-blue-600
+}
+
+li {
+    @apply mt-1.5
+}
+
 .code {
-    @apply bg-[#16181d] text-white px-2 py-1 rounded-lg border-2 border-gray-500;
+    @apply bg-[#16181d] text-white px-2 py-1 rounded-lg border-2 border-gray-500 mt-2 mb-2;
 }
 
 .code-zp {
