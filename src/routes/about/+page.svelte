@@ -37,9 +37,9 @@
     <div class="container mx-auto px-4">
         <h2 id="installation" class="text-2xl font-bold mb-4">Installation</h2>
         <p class="text-lg leading-relaxed text-gray-700">To install the latest version of Cream on macOS or Linux, run the following command in your terminal:</p>
-        <pre class="mt-2"><code class="lang-bash code">curl https:<span class="hljs-regexp">//</span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.bash | bash</code></pre>
+        <pre class="mt-2"><code class="lang-bash code">$ curl https:<span class="hljs-regexp">//</span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.bash | bash</code></pre>
         <p class="text-lg leading-relaxed text-gray-700">And to install the latest version of Cream on Windows, run the following command in your terminal:</p>
-        <pre class="mt-2.5"><code class="code">irl https:<span class="hljs-regexp">//</span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.ps1 | iex</code></pre>
+        <pre class="mt-2.5"><code class="code">$ irm https:<span class="hljs-regexp">//</span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.ps1 | iex</code></pre>
     </div>
 </div>
 

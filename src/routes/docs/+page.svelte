@@ -15,7 +15,7 @@
     <p>
         On windows, you can run the following command
     </p>
-    <pre class="mt-[1.7%]"><code class="lang-shell code">$ irl https://<span class="hljs-regexp"></span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.ps1 | iex </code></pre>
+    <pre class="mt-[1.7%]"><code class="lang-shell code">$ irm https://<span class="hljs-regexp"></span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.ps1 | iex </code></pre>
 </div>
 
 <div class="section">
