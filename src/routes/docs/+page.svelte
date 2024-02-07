@@ -7,19 +7,15 @@
     <h1>Getting started</h1>
     <p>
         Firstly, You have to install cream on your computer
-        You could do so by running this command
+    </p>
+    <p>
+        You can install cream on linux or macOS by running this
     </p>
     <pre class="mt-[1.7%]"><code class="lang-shell code">$ curl https://<span class="hljs-regexp"></span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.bash | bash </code></pre>
-    <p class="mt-opsp"><strong>Note</strong>: You&#39;ll have to run the command on a <a href="https://www.msys2.org/">msys</a> shell on windows to install cream.</p>
-</div>
-
-<div class="section">
-    <h1>Updating cream</h1>
     <p>
-        You could update cream by running this command
+        On windows, you can run the following command
     </p>
-    <pre class="mt-[1.7%]"><code class="lang-shell code">$ curl https://<span class="hljs-regexp"></span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/u</span>pdate.bash | bash </code></pre>
-    <p class="mt-opsp"><strong>Note</strong>: You&#39;ll have to run the command on a <a href="https://www.msys2.org/">msys</a> shell on windows to install cream.</p>
+    <pre class="mt-[1.7%]"><code class="lang-shell code">$ irl https://<span class="hljs-regexp"></span>raw.githubusercontent.com<span class="hljs-regexp">/tm-ahad/</span>cream-installation<span class="hljs-regexp">/master/i</span>nstall.ps1 | iex </code></pre>
 </div>
 
 <div class="section">
