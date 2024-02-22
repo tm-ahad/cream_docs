@@ -414,6 +414,13 @@ static_dir_render$/static
 </div>
 
 <div class="section">
+    <h1>Compilation</h1>
+    <p>
+        As we said, after building cream the compiled html will be saved on build/index.html
+    </p>
+</div>
+
+<div class="section">
     <h1>Npm packages</h1>
     <p>Example of importing npm package in cream:</p>
     <pre class="code mt-2 mb-3"><code>src/app.js
