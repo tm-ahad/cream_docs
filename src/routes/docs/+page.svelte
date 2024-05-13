@@ -83,10 +83,12 @@ app &#123;
 
     &lt;temp&gt;
         <code class="text-gray-500">//Rendering elements of 'fruits'</code>
-        @temp $mapConcat(Object.entries($todos), item => &#123;
+        &lt;div id="fruits"&gt;&lt;/div&gt;
+
+        $dyn:"fruits" innerHTML=mapConcat(Object.entries($todos), item => &#123;
             {CONST} [fruit, price] = item
 
-            return `<p>Price of a $&#123;fruit&#125; is $&#123;price&#125;</p>`
+            return `&lt;p&gt;Price of a $&#123;fruit&#125; is $&#123;price&#125;&lt;/p&gt;`
         &#125;)
     &lt;/temp&gt;
 &#125;</code></pre>
@@ -128,19 +130,16 @@ app &#123;
 ----------
     
 app &#123;
-    let a = 2;
-
-    <code class="text-gray-500">//:= is the state operator</code>
-    b := $a * 2;
-    a = 3;
+    let a = 0;
 
     let clickHandler = () => &#123;
+        <code class="text-gray-500">//:= is the state operator</code>
         a := $a + 1
     &#125;
     
     &lt;temp&gt;
         &lt;p id="pid"&gt;&lt;/p&gt;
-        $dyn:"pid" innerText=$b;
+        $dyn:"pid" innerText=$a;
 
         &lt;button id="bid"&gt;Click me!&lt;/button&gt;
         $dyn:"bid" onclick=$clickHandler;
