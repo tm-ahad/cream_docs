@@ -34,5 +34,5 @@
     <p class="font-semibold text-lg">
         Note:
     </p>
-    <p class="mt-[0.6%] ml-[0.4%]"> transpiler cream is at alpha phase right now. Bugs can be common</p>
+    <p class="mt-[0.6%] ml-[0.4%]"> transpiler cream is at beta phase right now</p>
 </div>
