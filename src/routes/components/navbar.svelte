@@ -4,7 +4,7 @@
 </script>
 <title>Cream</title>
 <body>
-	<nav class="bg-emerald-500 border-gray-200 sm:px-4 py-2  dark:bg-gray-900">	
+	<nav class="bg-emerald-500 border-gray-200 sm:px-4 py-2">	
 		<div class="bg-emerald-500 container flex flex-wrap justify-start items-center mx-auto">
 			<a href="/" class="nav-item">
 				<img src="/favicon.png" height="30" width="37" alt=""/>

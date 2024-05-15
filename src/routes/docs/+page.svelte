@@ -30,9 +30,13 @@
     <h1>Building</h1>
     <p>
         After building the compiled html will be saved into /build/index.html (default)
-        To build a cream project you can run:
+        To build a cream project you can run this on windows (make sure you changed dir to the project):
     </p>
-    <pre class="mt-[1.7%]"><code class="lang-shell code">$ cream make </code></pre>
+    <pre class="mt-[1.7%]"><code class="lang-shell code">$ powershell ./make.ps1 </code></pre>
+    <p>
+        Or, this command on linux or macos
+    </p>
+    <pre class="mt-[1.7%]"><code class="lang-shell code">$ bash ./make.sh </code></pre>
 </div>
 
 <div class="section">
@@ -387,7 +391,7 @@ const ApiClient = new HttpClient("api-link")</code></pre>
 
 <div class="section">
     <h1>Intregating tailwindcss</h1>
-    <h1 class="mt-2">Step 1 (Installation): </h1>
+    <h1 class="mt-2">Installation: </h1>
     <p>To install tailwindcss you first have to install css. If your project is a node project</p>
     <p>You could install tailwindcss by this command</p>
     <pre class="code mt-2 mb-3"><code>npm install -D tailwindcss
@@ -406,6 +410,32 @@ static_dir_render$/static
     <pre class="code mt-2 mb-3"><code>head_prefix.html
 ----------------
 &ltlink href="/static/dist.css" rel="stylesheet"/&gt</code></pre>
+
+    <p>Now paste this code in tailwind.config.js</p>
+    <pre class="code mt-2 mb-3"><code>tailwind.config.js
+------------------
+/** @type &#123;import('tailwindcss').Config&#125; */
+module.exports = &#123;
+  content: ["./build/index.html", "./build/error.html"],
+  theme: &#123
+    extend: &#123;&#125;,
+  &#125,
+  plugins: [],
+&#125;
+</code></pre>
+    <p>Let's create the input css file. which is essential</p>
+    <pre class="code mt-2 mb-3"><code>src/styles/style.css
+--------------------
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</code></pre>
+    
+
+    <p>Now let's update your make file (make.ps1 or make.sh)</p>
+    <p>Append this command at the end of your make file (Don't forget to create src/styles/style.css)</p>
+    <pre class="code mt-2 mb-3"><code>npx tailwindcss -i ./src/styles/style.css -o ./build/output.css
+</code></pre>
 
     <h2 class="text-lg font-semibold">
         Build your project then serve it & Voila tailwindcss intregated with cream
