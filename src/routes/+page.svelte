@@ -2,11 +2,13 @@
     import Navbar from "./components/navbar.svelte";
 </script>
 <Navbar/>
+
 <div class="section flex justify-center">
     <h1>
         <img class="mt-2 mb-0" src="/favicon.svg" height="90" width="90" alt="">
     </h1>
 </div>
+
 <div class="section flex justify-center">
     <h1>
         Cream
