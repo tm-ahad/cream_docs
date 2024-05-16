@@ -5,7 +5,7 @@
 
 <div class="section">
     <h1 id="cream" class="text-4xl font-bold text-center mb-4">Cream</h1>
-    <p class="text-lg leading-relaxed text-gray-700 px-4">Cream is a compiler that enables you to write frontend user interfaces with declarative code and compiles to HTML. It offers a modern approach to building web applications, with features designed to enhance productivity and performance.</p>
+    <p class="text-lg leading-relaxed text-gray-700 px-4">Cream is a compiler that enables you to write frontend user interfaces with declarative code and compiles to HTML. It offers a modern approach to build web applications, with features designed to enhance productivity and performance.</p>
 </div>
 
 <div class="section py-4">
