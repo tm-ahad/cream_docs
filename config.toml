@@ -9,7 +9,8 @@ build = [
     "src/assets/github.png",
     "favicon.png"
 ]
-port = 6767
+port = 8000
+root = "/cream_docs"
 
 [packages]
 
