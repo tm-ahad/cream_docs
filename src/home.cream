@@ -1,7 +1,7 @@
 <Navbar/>
 <div className="section flex justify-center mt-2">
     <h1>
-        <img className="mt-2 mb-0" src="/favicon.png" height="90" width="90" alt=""></img>
+        <img className="mt-2 mb-0" src="/cream_docs/favicon.png" height="90" width="90" alt=""></img>
     </h1>
 </div>
 
