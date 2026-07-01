@@ -1,5 +1,27 @@
-<Navbar></Navbar>
-<p>Home</p>
+<Navbar/>
+<div className="section flex justify-center mt-2">
+    <h1>
+        <img className="mt-2 mb-0" src="/favicon.png" height="90" width="90" alt=""></img>
+    </h1>
+</div>
+
+<div className="section flex justify-center">
+    <h2 className="text-lg">
+        A transpiler for building blazingly fast web apps
+    </h2>
+</div>
+<div className="section flex justify-center mt-2">
+    <a className="bg-blue-600 rounded-md mr-5 w-16 h-8 text-center pt-[3px]" href="/docs">
+        Docs
+    </a>
+    <a className="bg-blue-600 rounded-md mr-5 w-16 h-8 text-center pt-[3px]" href="/about">
+        About
+    </a>
+    <a className="bg-blue-600 rounded-md mr-5 w-16 h-8 text-center pt-[3px]" href="/stdlib">
+        Stdlib
+    </a>
+</div>
+
 <script name="Home">
     import { Navbar } from "@src/components/navbar.cream"
 </script>

@@ -6,7 +6,7 @@ build = [
     "src/not_found.cream",
     "src/stdlib.cream",
     "src/docs.cream",
-    "github.png",
+    "src/assets/github.png",
     "favicon.png"
 ]
 port = 6767

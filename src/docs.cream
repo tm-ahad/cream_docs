@@ -1,352 +1,352 @@
 <Navbar/>
-<div className="container mx-auto mt-6">
+<div className="container mx-auto max-w-5xl mt-5">
     <div className="section">
-    <div className="container">
-        <h2 id="installation" className="text-2xl font-bold mb-4">Installation</h2>
-        <p className="text-lg leading-relaxed text-gray-700">To install the latest version of Cream, run the following command in your terminal (make sure Rust is installed):</p>
-        <pre className="mt-2"><code className="lang-bash code">$ cargo install cream-js</code></pre>
-    </div>
-</div>
-
-<div className="section py-4">
-    <div className="container mx-auto">
-        <h2 id="getting-started" className="text-2xl font-bold mb-4">Getting Started</h2>
-        <p className="text-lg leading-relaxed text-gray-700">To get started with Cream, follow these steps:</p>
-        <ol className="list-decimal list-inside mt-4">
-            <li>Install Cream using the provided installation script.</li>
-            <li>Create a new Cream project or add Cream to an existing project.</li>
-            <li>Write your frontend UI code using Cream's declarative syntax.</li>
-            <li>Compile your code to generate the corresponding HTML output.</li>
-            <li>Deploy and run your application using a web browser or server environment.</li>
-        </ol>
-        <p className="text-lg leading-relaxed text-gray-700">For detailed documentation and usage examples, visit <a href="https://cream-dev.vercel.app" className="link">cream-dev.vercel.app</a>.</p>
-    </div>
-</div>
-<main className="mx-auto max-w-5xl">
-
-    <h1 className="text-4xl font-bold mb-6">
-        Configuration
-    </h1>
-
-    <p className="mb-8">
-        Every Cream project contains a
-        <code className="px-1 rounded bg-gray-100">config.toml</code>
-        file in the project root.
-    </p>
-
-    <h2 className="text-2xl font-semibold mb-4">
-        Example
-    </h2>
-
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>build = [
-    "src/app.cream",
-    "public/favicon.ico"
-]
-
-[packages]
-chart = "https://cdn.jsdelivr.net/npm/chart.js"
-
-[env]
-API_URL = "http://localhost:8080"
-DEBUG = true
-</code></pre>
-
-    <h2 className="text-2xl font-semibold mb-4">
-        build
-    </h2>
-
-    <p className="mb-4">
-        The
-        <code className="px-1 rounded bg-gray-100">build</code>
-        array contains all files that should be included in the build.
-    </p>
-
-    <p className="mb-8">
-        This includes both Cream source files and static assets such as
-        images, icons, stylesheets, and other files that should be copied
-        into the final build output.
-    </p>
-
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>build = [
-    "src/app.cream",
-    "public/favicon.ico"
-]
-</code></pre>
-
-    <h2 className="text-2xl font-semibold mb-4">
-        env
-    </h2>
-
-    <p className="mb-4">
-        The
-        <code className="px-1 rounded bg-gray-100">env</code>
-        section defines compile-time environment variables.
-    </p>
-
-    <p className="mb-8">
-        Values are resolved during compilation and embedded directly into
-        the generated output.
-    </p>
-
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>[env]
-API_URL = "http://localhost:8080"
-DEBUG = true
-</code></pre>
-
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>ENV.API_URL
-ENV.DEBUG
-</code></pre>
-
-    <h2 className="text-2xl font-semibold mb-4">
-        packages
-    </h2>
-
-    <p className="mb-4">
-        The
-        <code className="px-1 rounded bg-gray-100">packages</code>
-        array contains external CDN dependencies.
-    </p>
-
-    <p className="mb-8">
-        Cream automatically includes these scripts in the generated
-        application.
-    </p>
-
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>
-[packages]
-zod = "https://esm.sh/zod"
-</code></pre>
-
-    <p className="mb-8">
-        These external cdn can be used via:
-    </p>
-
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>
-import zod from "@pkg:zod"
-</code></pre>
-
-    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <strong>Note:</strong>
-        Environment variables are compile-time constants. Changing an
-        environment variable requires rebuilding the project.
+        <div className="container">
+            <h2 id="installation" className="text-2xl font-bold mb-4">Installation</h2>
+            <p className="text-lg leading-relaxed text-gray-700">To install the latest version of Cream, run the following command in your terminal (make sure Rust is installed):</p>
+            <pre className="mt-2"><code className="lang-bash code">$ cargo install cream-js</code></pre>
+        </div>
     </div>
 
-</main>
-<main className="mx-auto max-w-5xl py-10">
+    <div className="section py-4">
+        <div className="container mx-auto">
+            <h2 id="getting-started" className="text-2xl font-bold mb-4">Getting Started</h2>
+            <p className="text-lg leading-relaxed text-gray-700">To get started with Cream, follow these steps:</p>
+            <ol className="list-decimal list-inside mt-4">
+                <li>Install Cream using the provided installation script.</li>
+                <li>Create a new Cream project or add Cream to an existing project.</li>
+                <li>Write your frontend UI code using Cream's declarative syntax.</li>
+                <li>Compile your code to generate the corresponding HTML output.</li>
+                <li>Deploy and run your application using a web browser or server environment.</li>
+            </ol>
+            <p className="text-lg leading-relaxed text-gray-700">For detailed documentation and usage examples, visit <a href="https://cream-dev.vercel.app" className="link">cream-dev.vercel.app</a>.</p>
+        </div>
+    </div>
+    <main className="mx-auto max-w-5xl">
 
-    <h1 className="text-4xl font-bold mb-6">
-        Render
-    </h1>
+        <h1 className="text-4xl font-bold mb-6">
+            Configuration
+        </h1>
 
-    <p className="mb-8">
-        The <code className="px-1 rounded bg-gray-100">render</code> tag allows
-        JavaScript to be executed directly inside a component's render scope.
-    </p>
+        <p className="mb-8">
+            Every Cream project contains a
+            <code className="px-1 rounded bg-gray-100">config.toml</code>
+            file in the project root.
+        </p>
 
-    <p className="mb-8">
-        Any DOM nodes produced inside a render block are rendered normally,
-        while JavaScript statements are injected into the render function
-        generated by the compiler.
-    </p>
+        <h2 className="text-2xl font-semibold mb-4">
+            Example
+        </h2>
 
-    <h2 className="text-2xl font-semibold mb-4">
-        Example
-    </h2>
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>build = [
+        "src/app.cream",
+        "public/favicon.ico"
+    ]
 
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;render&gt;
-    const greeting = "Hello World";
+    [packages]
+    chart = "https://cdn.jsdelivr.net/npm/chart.js"
 
-    &lt;h1&gt;${"${greeting}"}&lt;/h1&gt;
-&lt;/render&gt;
-</code></pre>
+    [env]
+    API_URL = "http://localhost:8080"
+    DEBUG = true
+    </code></pre>
 
-    <h2 className="text-2xl font-semibold mb-4">
-        Loops
-    </h2>
+        <h2 className="text-2xl font-semibold mb-4">
+            build
+        </h2>
 
-    <p className="mb-4">
-        Render blocks are commonly used for rendering collections.
-    </p>
+        <p className="mb-4">
+            The
+            <code className="px-1 rounded bg-gray-100">build</code>
+            array contains all files that should be included in the build.
+        </p>
 
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;render&gt;
-    for (const fruit of fruits) {
-        &lt;li&gt;${"${fruit}"}&lt;/li&gt;
-    }
-&lt;/render&gt;
-</code></pre>
+        <p className="mb-8">
+            This includes both Cream source files and static assets such as
+            images, icons, stylesheets, and other files that should be copied
+            into the final build output.
+        </p>
 
-    <h2 className="text-2xl font-semibold mb-4">
-        Conditionals
-    </h2>
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>build = [
+        "src/app.cream",
+        "public/favicon.ico"
+    ]
+    </code></pre>
 
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;render&gt;
-    if (loggedIn) {
-        &lt;h1&gt;Welcome back!&lt;/h1&gt;
-    }
-&lt;/render&gt;
-</code></pre>
+        <h2 className="text-2xl font-semibold mb-4">
+            env
+        </h2>
 
-    <h2 className="text-2xl font-semibold mb-4">
-        Using State
-    </h2>
+        <p className="mb-4">
+            The
+            <code className="px-1 rounded bg-gray-100">env</code>
+            section defines compile-time environment variables.
+        </p>
 
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>
-    &lt;button subscribe="[count]" on_click="inc"&gt;
-    Count: ${"${count.value}"}
-    &lt;/button&gt;
+        <p className="mb-8">
+            Values are resolved during compilation and embedded directly into
+            the generated output.
+        </p>
 
-    &lt;render&gt;
-        if (count.value &gt; 10) {
-            &lt;p&gt;High score!&lt;/p&gt;
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>[env]
+    API_URL = "http://localhost:8080"
+    DEBUG = true
+    </code></pre>
+
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>ENV.API_URL
+    ENV.DEBUG
+    </code></pre>
+
+        <h2 className="text-2xl font-semibold mb-4">
+            packages
+        </h2>
+
+        <p className="mb-4">
+            The
+            <code className="px-1 rounded bg-gray-100">packages</code>
+            array contains external CDN dependencies.
+        </p>
+
+        <p className="mb-8">
+            Cream automatically includes these scripts in the generated
+            application.
+        </p>
+
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>
+    [packages]
+    zod = "https://esm.sh/zod"
+    </code></pre>
+
+        <p className="mb-8">
+            These external cdn can be used via:
+        </p>
+
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>
+    import zod from "@pkg:zod"
+    </code></pre>
+
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <strong>Note:</strong>
+            Environment variables are compile-time constants. Changing an
+            environment variable requires rebuilding the project.
+        </div>
+
+    </main>
+    <main className="mx-auto max-w-5xl py-10">
+
+        <h1 className="text-4xl font-bold mb-6">
+            Render
+        </h1>
+
+        <p className="mb-8">
+            The <code className="px-1 rounded bg-gray-100">render</code> tag allows
+            JavaScript to be executed directly inside a component's render scope.
+        </p>
+
+        <p className="mb-8">
+            Any DOM nodes produced inside a render block are rendered normally,
+            while JavaScript statements are injected into the render function
+            generated by the compiler.
+        </p>
+
+        <h2 className="text-2xl font-semibold mb-4">
+            Example
+        </h2>
+
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;render&gt;
+        const greeting = "Hello World";
+
+        &lt;h1&gt;${"${greeting}"}&lt;/h1&gt;
+    &lt;/render&gt;
+    </code></pre>
+
+        <h2 className="text-2xl font-semibold mb-4">
+            Loops
+        </h2>
+
+        <p className="mb-4">
+            Render blocks are commonly used for rendering collections.
+        </p>
+
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;render&gt;
+        for (const fruit of fruits) {
+            &lt;li&gt;${"${fruit}"}&lt;/li&gt;
         }
     &lt;/render&gt;
     </code></pre>
 
-    <h2 className="text-2xl font-semibold mb-4">
-        Parser Limitations
-    </h2>
+        <h2 className="text-2xl font-semibold mb-4">
+            Conditionals
+        </h2>
 
-    <p className="mb-4">
-        Avoid using raw <code>&lt;</code> and <code>&gt;</code> operators
-        inside render blocks.
-    </p>
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;render&gt;
+        if (loggedIn) {
+            &lt;h1&gt;Welcome back!&lt;/h1&gt;
+        }
+    &lt;/render&gt;
+    </code></pre>
 
-    <p className="mb-4">
-        Cream parses render blocks alongside its template syntax, so
-        comparison operators may interfere with parsing.
-    </p>
+        <h2 className="text-2xl font-semibold mb-4">
+            Using State
+        </h2>
 
-    <h3 className="text-xl font-semibold mb-3">
-        Recommended
-    </h3>
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>
+        &lt;button subscribe="[count]" on_click="inc"&gt;
+        Count: ${"${count.value}"}
+        &lt;/button&gt;
 
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;render&gt;
-    for (const item of items) {
-        &lt;li&gt;${"${item}"}&lt;/li&gt;
-    }
-&lt;/render&gt;
-</code></pre>
-
-    <h3 className="text-xl font-semibold mb-3">
-        Avoid
-    </h3>
-
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>
-        &lt;div&gt;
         &lt;render&gt;
-    for (let i = 0; i &lt; 10; ++i) {
-        &lt;li&gt;${"${i}"}&lt;/li&gt;
-    }
-&lt;/render&gt;
-&lt;/div&gt;
-</code></pre>
+            if (count.value &gt; 10) {
+                &lt;p&gt;High score!&lt;/p&gt;
+            }
+        &lt;/render&gt;
+        </code></pre>
 
-    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <strong>Note:</strong>
-        The <code className="px-1">render</code> tag is a compiler feature and does not
-        produce an element in the final DOM.
-    </div>
+        <h2 className="text-2xl font-semibold mb-4">
+            Parser Limitations
+        </h2>
 
-</main>
-<main className="mx-auto max-w-5x mt-4">
+        <p className="mb-4">
+            Avoid using raw <code>&lt;</code> and <code>&gt;</code> operators
+            inside render blocks.
+        </p>
 
-    <h1 className="text-4xl font-bold mb-4">
-        Components
-    </h1>
+        <p className="mb-4">
+            Cream parses render blocks alongside its template syntax, so
+            comparison operators may interfere with parsing.
+        </p>
 
-    <p className="mb-6">
-        Cream uses Single File Components (SFCs). A component consists of a
-        single file containing both logic and markup.
-    </p>
+        <h3 className="text-xl font-semibold mb-3">
+            Recommended
+        </h3>
 
-    <p className="mb-6">
-        The component name is determined by the <code className="px-1.5 py-0.5 rounded bg-gray-100">name</code> attribute
-        on the outermost <code className="px-1.5 py-0.5 rounded bg-gray-100">script</code> tag.
-    </p>
-
-    <h2 className="text-2xl font-semibold mb-4">
-        Defining a Component
-    </h2>
-
-    <pre className="bg-gray-100 p-4 rounded-lg mb-8 overflow-x-auto"><code>&lt;script name="Button"&gt;
-&lt;/script&gt;
-
-&lt;button&gt;
-    Click Me
-&lt;/button&gt;
-</code></pre>
-
-    <h2 className="text-2xl font-semibold mb-4">
-        Using a Component
-    </h2>
-
-    <pre className="bg-gray-100 p-4 rounded-lg mb-8 overflow-x-auto"><code>&lt;script name="App"&gt;
-    import Button from "@src/Button.cream";
-&lt;/script&gt;
-
-&lt;Button /&gt;
-</code></pre>
-
-
-    <h2 className="text-2xl font-semibold mb-4">
-        Example
-    </h2>
-
-    <pre className="bg-gray-100 p-4 rounded-lg mb-8 overflow-x-auto"><code>&lt;script name="Counter"&gt;
-    import { particle } from "@std:particle.ts"
-    let count = particle(0);
-
-    function increment() {
-        count.value += 1;
-    }
-&lt;/script&gt;
-
-&lt;button on_click="@increment" subscribe="[count]"&gt;
-    Count: ${"${count}"}
-&lt;/button&gt;
-</code></pre>
-
-    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-        <strong>Note:</strong>
-        Cream components are compiled into efficient JavaScript and direct DOM
-        operations. Cream does not use a Virtual DOM.
-    </div>
-
-    <h1 className="text-4xl font-bold mb-6 mt-4">
-        Directives
-    </h1>
-
-    <p className="mb-4">
-        Directives are special attributes that add behavior to elements.
-        If you have used Vue, Cream directives will feel familiar.
-    </p>
-
-    <h2 className="text-2xl font-semibold mb-4">
-        c-if
-    </h2>
-
-    <p className="mb-4">
-        Conditionally renders an element.
-    </p>
-
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;p c-if="loggedIn"&gt;
-        Welcome back!
-    &lt;/p&gt;
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;render&gt;
+        for (const item of items) {
+            &lt;li&gt;${"${item}"}&lt;/li&gt;
+        }
+    &lt;/render&gt;
     </code></pre>
 
-    <h2 className="text-2xl font-semibold mb-4">
-        c-for
-    </h2>
+        <h3 className="text-xl font-semibold mb-3">
+            Avoid
+        </h3>
 
-    <p className="mb-4">
-        Repeats an element for every item in a collection.
-    </p>
-
-    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;li c-for="let fruit of fruits"&gt;
-        ${"${fruit}"}
-    &lt;/li&gt;
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>
+            &lt;div&gt;
+            &lt;render&gt;
+        for (let i = 0; i &lt; 10; ++i) {
+            &lt;li&gt;${"${i}"}&lt;/li&gt;
+        }
+    &lt;/render&gt;
+    &lt;/div&gt;
     </code></pre>
-</main>
+
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <strong>Note:</strong>
+            The <code className="px-1">render</code> tag is a compiler feature and does not
+            produce an element in the final DOM.
+        </div>
+
+    </main>
+    <main className="mx-auto max-w-5x mt-4">
+
+        <h1 className="text-4xl font-bold mb-4">
+            Components
+        </h1>
+
+        <p className="mb-6">
+            Cream uses Single File Components (SFCs). A component consists of a
+            single file containing both logic and markup.
+        </p>
+
+        <p className="mb-6">
+            The component name is determined by the <code className="px-1.5 py-0.5 rounded bg-gray-100">name</code> attribute
+            on the outermost <code className="px-1.5 py-0.5 rounded bg-gray-100">script</code> tag.
+        </p>
+
+        <h2 className="text-2xl font-semibold mb-4">
+            Defining a Component
+        </h2>
+
+        <pre className="bg-gray-100 p-4 rounded-lg mb-8 overflow-x-auto"><code>&lt;script name="Button"&gt;
+    &lt;/script&gt;
+
+    &lt;button&gt;
+        Click Me
+    &lt;/button&gt;
+    </code></pre>
+
+        <h2 className="text-2xl font-semibold mb-4">
+            Using a Component
+        </h2>
+
+        <pre className="bg-gray-100 p-4 rounded-lg mb-8 overflow-x-auto"><code>&lt;script name="App"&gt;
+        import Button from "@src/Button.cream";
+    &lt;/script&gt;
+
+    &lt;Button /&gt;
+    </code></pre>
+
+
+        <h2 className="text-2xl font-semibold mb-4">
+            Example
+        </h2>
+
+        <pre className="bg-gray-100 p-4 rounded-lg mb-8 overflow-x-auto"><code>&lt;script name="Counter"&gt;
+        import { particle } from "@std:particle.ts"
+        let count = particle(0);
+
+        function increment() {
+            count.value += 1;
+        }
+    &lt;/script&gt;
+
+    &lt;button on_click="@increment" subscribe="[count]"&gt;
+        Count: ${"${count}"}
+    &lt;/button&gt;
+    </code></pre>
+
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <strong>Note:</strong>
+            Cream components are compiled into efficient JavaScript and direct DOM
+            operations. Cream does not use a Virtual DOM.
+        </div>
+
+        <h1 className="text-4xl font-bold mb-6 mt-4">
+            Directives
+        </h1>
+
+        <p className="mb-4">
+            Directives are special attributes that add behavior to elements.
+            If you have used Vue, Cream directives will feel familiar.
+        </p>
+
+        <h2 className="text-2xl font-semibold mb-4">
+            c-if
+        </h2>
+
+        <p className="mb-4">
+            Conditionally renders an element.
+        </p>
+
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;p c-if="loggedIn"&gt;
+            Welcome back!
+        &lt;/p&gt;
+        </code></pre>
+
+        <h2 className="text-2xl font-semibold mb-4">
+            c-for
+        </h2>
+
+        <p className="mb-4">
+            Repeats an element for every item in a collection.
+        </p>
+
+        <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;li c-for="let fruit of fruits"&gt;
+            ${"${fruit}"}
+        &lt;/li&gt;
+        </code></pre>
+    </main>
 
 </div>
 
