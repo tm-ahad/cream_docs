@@ -31,16 +31,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: use Rust
         uses: dtolnay/rust-toolchain@stable
+
       - name: Install cream
         run: cargo install cream-js
+
       - name: Build
         run: cream make
+
+      - name: Create fallback
+        run: cp build/index.html build/404.html
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './build'
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
