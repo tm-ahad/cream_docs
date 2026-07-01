@@ -1,5 +1,5 @@
 <Navbar/>
-<div className="section flex justify-center mt-2">
+<div className="section flex justify-center mt-5">
     <h1>
         <img className="mt-2 mb-0" src="/cream_docs/favicon.png" height="90" width="90" alt=""></img>
     </h1>
@@ -11,13 +11,13 @@
     </h2>
 </div>
 <div className="section flex justify-center mt-2">
-    <a className="bg-blue-600 rounded-md mr-5 w-16 h-8 text-center pt-[3px]" href="/docs">
+    <a className="bg-blue-600 rounded-md mr-5 w-16 h-8 text-center pt-[3px]" href="/cream_docs/docs">
         Docs
     </a>
-    <a className="bg-blue-600 rounded-md mr-5 w-16 h-8 text-center pt-[3px]" href="/about">
+    <a className="bg-blue-600 rounded-md mr-5 w-16 h-8 text-center pt-[3px]" href="/cream_docs/about">
         About
     </a>
-    <a className="bg-blue-600 rounded-md mr-5 w-16 h-8 text-center pt-[3px]" href="/stdlib">
+    <a className="bg-blue-600 rounded-md mr-5 w-16 h-8 text-center pt-[3px]" href="/cream_docs/stdlib">
         Stdlib
     </a>
 </div>
