@@ -34,6 +34,10 @@
         <h2 id="installation" className="text-2xl font-bold mb-4">Installation</h2>
         <p className="text-lg leading-relaxed text-gray-700">To install the latest version of Cream, run the following command in your terminal (make sure Rust is installed):</p>
         <pre className="mt-2"><code className="lang-bash code">$ cargo install cream-js</code></pre>
+        <p className="text-lg leading-relaxed text-gray-700">
+            Don't forget to source
+            <code className="px-1 rounded bg-gray-100">.cargo/bin</code>
+        </p>
     </div>
 </div>
 

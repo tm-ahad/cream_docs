@@ -122,8 +122,8 @@
         </p>
 
         <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>
-    import zod from "@pkg:zod"
-    </code></pre>
+            import zod from "@pkg:zod"
+        </code></pre>
 
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
             <strong>Note:</strong>
@@ -347,6 +347,153 @@
         &lt;/li&gt;
         </code></pre>
     </main>
+
+    <div>
+    <h1 className="text-4xl font-bold mb-6">Router</h1>
+    <p className="mb-6 text-gray-700">
+        Cream ships with a lightweight client-side router in the standard library.
+        The router maps URL paths to component mount functions and renders the matching page.
+    </p>
+
+    <h2 className="text-2xl font-semibold mt-8 mb-4">Importing the Router</h2>
+
+    <pre className="bg-gray-100 rounded-lg p-4 overflow-x-auto mb-6"><code>import { Router } from "@std:router.ts"</code></pre>
+
+    <h2 className="text-2xl font-semibold mt-8 mb-4">Creating a Router</h2>
+
+    <pre className="bg-gray-100 rounded-lg p-4 overflow-x-auto mb-6"><code>let router = new Router()</code></pre>
+
+    <h2 className="text-2xl font-semibold mt-8 mb-4">Registering Routes</h2>
+
+    <p className="mb-4 text-gray-700">
+        Use <code className="bg-gray-100 px-1 rounded">setHandle(path, handler, mount)</code>
+        to associate a URL path with a component.
+    </p>
+
+    <pre className="bg-gray-100 rounded-lg p-4 overflow-x-auto mb-6"><code>router.setHandle("/", Home, true)
+
+    router.setHandle("/about", About, true)
+    router.setHandle("/docs", Docs, true)</code></pre>
+    <p className="mb-6 text-gray-700">
+        The third argument controls whether the component should be mounted automatically when the route is matched.
+    </p>
+
+    <h2 className="text-2xl font-semibold mt-8 mb-4">Default Route</h2>
+
+    <p className="mb-4 text-gray-700">
+        A default handler can be registered to handle unknown paths.
+    </p>
+
+    <pre className="bg-gray-100 rounded-lg p-4 overflow-x-auto mb-6"><code>router.setDefaultHandler(NotFound)</code></pre>
+
+    <h2 className="text-2xl font-semibold mt-8 mb-4">Starting the Router</h2>
+
+    <pre className="bg-gray-100 rounded-lg p-4 overflow-x-auto mb-4"><code>router.serve()</code></pre>
+
+    <p className="mb-6 text-gray-700">
+        The router immediately renders the current page
+    </p>
+
+    <h2 className="text-2xl font-semibold mt-8 mb-4">Complete Example</h2>
+
+    <pre className="bg-gray-100 rounded-lg p-4 overflow-x-auto mb-6"><code>
+    &lt;script&gt;
+        import { Router } from "@std:router.ts"
+
+        import { mount as About } from "@src/about.cream"
+        import { mount as Home } from "@src/home.cream"
+        import { mount as Docs } from "@src/docs.cream"
+        import { mount as Stdlib } from "@src/stdlib.cream"
+        import { mount as NotFound } from "@src/not_found.cream"
+
+        let router = new Router()
+
+        router.setHandle("/", Home, true)
+        router.setHandle("/about", About, true)
+        router.setHandle("/docs", Docs, true)
+        router.setHandle("/stdlib", Stdlib, true)
+
+        router.setDefaultHandler(NotFound)
+
+        router.serve()
+    &lt;/script&gt;</code></pre>
+
+    <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded-r-lg mt-8">
+        <p className="font-semibold mb-2">Tip</p>
+        <p>
+            For SPA applications, configure your server to fall back to
+            <code className="bg-white px-1 rounded">index.html</code>
+            for unknown routes. This allows direct navigation to routes such as
+            <code className="bg-white px-1 rounded">/about</code> and
+            <code className="bg-white px-1 rounded">/docs</code>.
+        </p>
+    </div>
+    </div>
+
+    
+    <div>
+        <h1 className="text-4xl font-bold mb-6">head_prefix.html</h1>
+
+    <p className="mb-6 text-gray-700">
+        Cream automatically injects the contents of
+        <code class="bg-gray-100 px-1 rounded">head_prefix.html</code>
+        into the generated
+        <code class="bg-gray-100 px-1 rounded">&lt;head&gt;</code>
+        section of every page.
+    </p>
+
+    <p className="mb-6 text-gray-700">
+        This allows you to define global metadata, stylesheets, scripts, fonts, and other head elements in a single location.
+    </p>
+
+    <h2 className="text-2xl font-semibold mt-8 mb-4">Location</h2>
+
+    <pre className="bg-gray-100 rounded-lg p-4 overflow-x-auto mb-6"><code>project/
+
+    ├── src/
+    ├── cream.toml
+    ├── head_prefix.html
+    └── build/</code></pre>
+
+    <h2 className="text-2xl font-semibold mt-8 mb-4">Example</h2>
+
+    <p className="mb-4 text-gray-700">
+        A typical
+        <code className="bg-gray-100 px-1 rounded">head_prefix.html</code>
+        file might look like:
+    </p>
+
+    <pre className="bg-gray-100 rounded-lg p-4 overflow-x-auto mb-6"><code>
+    &lt;script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"&gt;&lt;/script&gt;</code></pre>
+
+    <p className="mb-4 text-gray-700">
+        During compilation, Cream inserts the contents of
+        <code className="bg-gray-100 px-1 rounded">head_prefix.html</code>
+        into the generated page head.
+    </p>
+
+
+    <h2 className="text-2xl font-semibold mt-8 mb-4">Common Uses</h2>
+
+    <ul className="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Meta tags</li>
+        <li>Favicons</li>
+        <li>Tailwind CDN</li>
+        <li>Analytics scripts</li>
+        <li>Font imports</li>
+        <li>Global stylesheets</li>
+        <li>SEO configuration</li>
+    </ul>
+
+    <div className="border-l-4 border-blue-500 bg-blue-50 p-4 rounded-r-lg mt-8">
+        <p className="font-semibold mb-2">Why use head_prefix.html?</p>
+        <p>
+            Instead of repeating the same head elements across multiple pages,
+            define them once and let Cream inject them automatically during compilation.
+        </p>
+    </div>
+
+    </div>
 
 </div>
 
