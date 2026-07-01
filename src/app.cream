@@ -7,10 +7,10 @@
     import { mount as NotFound } from "@src/not_found.cream"
 
     let router = new Router()
-    router.setHandle("/cream_docs", Home, true)
-    router.setHandle("/cream_docs/about", About, true)
-    router.setHandle("/cream_docs/docs", Docs, true)
-    router.setHandle("/cream_docs/stdlib", Stdlib, true)
+    router.setHandle("/cream_docs/", Home, true)
+    router.setHandle("/cream_docs/about/", About, true)
+    router.setHandle("/cream_docs/docs/", Docs, true)
+    router.setHandle("/cream_docs/stdlib/", Stdlib, true)
     router.setDefaultHandler(NotFound)
 
     router.serve()
