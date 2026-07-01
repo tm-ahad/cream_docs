@@ -1,0 +1,174 @@
+<Navbar/>
+<main className="mx-auto max-w-5xl px-6 py-10">
+
+    <h1 className="text-4xl font-bold mb-6">
+        Standard Library
+    </h1>
+
+    <p className="mb-8">
+        Cream ships with a small standard library containing utilities for
+        reactivity and application development.
+    </p>
+
+    <h2 className="text-2xl font-semibold mb-4">
+        Particle
+    </h2>
+
+    <p className="mb-4">
+        The
+        <code className="px-1 rounded bg-gray-100">particle</code>
+        function creates a reactive state object.
+    </p>
+
+    <p className="mb-6">
+        When a particle's value changes, Cream automatically updates the
+        affected DOM nodes.
+    </p>
+
+    <h3 className="text-xl font-semibold mb-3">
+        Creating a Particle
+    </h3>
+
+    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>let count = particle(0);</code></pre>
+
+    <h3 className="text-xl font-semibold mb-3">
+        Reading a Value
+    </h3>
+
+    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>{count.value}</code></pre>
+
+    <h3 className="text-xl font-semibold mb-3">
+        Updating a Value
+    </h3>
+
+    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>count.value += 1;</code></pre>
+
+    <h3 className="text-xl font-semibold mb-3">
+        Example
+    </h3>
+
+    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8">
+        <code>&lt;script name="Counter"&gt;
+    import { particle } from "@std/particle.js"    
+    let count = particle(0);
+
+    function increment() {
+        count.value += 1;
+    }
+&lt;/script&gt;
+
+&lt;button on_click="@increment" subscribe="[i]"&gt;
+    Count: ${"${count.value}"}
+&lt;/button&gt;
+</code></pre>
+
+    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+        <strong>Note:</strong>
+        Particles are reactive. Updating a particle automatically updates
+        subscribed DOM nodes.
+    </div>
+
+</main>
+
+<main className="mx-auto max-w-5xl px-6 py-10">
+
+    <h1 className="text-4xl font-bold mb-6">
+        Router
+    </h1>
+
+    <p className="mb-8">
+        Cream includes a client-side router for building Single Page
+        Applications (SPAs).
+    </p>
+
+    <h2 className="text-2xl font-semibold mb-4">
+        Creating a Router
+    </h2>
+
+    <p className="mb-4">
+        Import the router and the components that should handle each route.
+    </p>
+
+    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;script name="App"&gt;
+    import { Router } from "@std:router.ts"
+
+    import { mount as About } from "@src/about.cream"
+    import { mount as Home } from "@src/home.cream"
+    import { mount as Docs } from "@src/docs.cream"
+    import { mount as Stdlib } from "@src/stdlib.cream"
+    import { mount as NotFound } from "@src/not_found.cream"
+
+    let router = new Router()
+
+    router.setHandle("/", Home, true)
+    router.setHandle("/about", About, true)
+    router.setHandle("/docs", Docs, true)
+    router.setHandle("/stdlib", Stdlib, true)
+
+    router.setDefaultHandler(NotFound)
+
+    router.serve()
+&lt;/script&gt;
+</code></pre>
+
+    <h2 className="text-2xl font-semibold mb-4">
+        Registering Routes
+    </h2>
+
+    <p className="mb-4">
+        Use
+        <code className="px-1 rounded bg-gray-100">setHandle()</code>
+        to associate a path with a component.
+    </p>
+
+    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>router.setHandle("/", Home, true)
+router.setHandle("/about", About, true)
+</code></pre>
+
+    <h2 className="text-2xl font-semibold mb-4">
+        Default Handler
+    </h2>
+
+    <p className="mb-4">
+        Use
+        <code className="px-1 rounded bg-gray-100">setDefaultHandler()</code>
+        to specify a component for unknown routes.
+    </p>
+
+    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>router.setDefaultHandler(NotFound)
+</code></pre>
+
+    <h2 className="text-2xl font-semibold mb-4">
+        Starting the Router
+    </h2>
+
+    <p className="mb-4">
+        After registering all routes, start the router.
+    </p>
+
+    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>router.serve()
+</code></pre>
+
+    <h2 className="text-2xl font-semibold mb-4">
+        Navigation
+    </h2>
+
+    <p className="mb-4">
+        Use normal links to navigate between pages.
+    </p>
+
+    <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>&lt;a href="/"&gt;Home&lt;/a&gt;
+&lt;a href="/docs"&gt;Docs&lt;/a&gt;
+&lt;a href="/about"&gt;About&lt;/a&gt;
+</code></pre>
+
+    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+        <strong>Note:</strong>
+        the serve function checks the current location and mounts the respective component.
+    </div>
+
+</main>
+
+<script name="_">
+    import { Navbar } from "@src/components/navbar.cream"
+</script>

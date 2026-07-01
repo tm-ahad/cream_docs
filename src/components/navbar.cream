@@ -1,0 +1,14 @@
+<nav className="bg-emerald-500 border-gray-200 sm:px-4 py-2">	
+	<div className="bg-emerald-500 container flex flex-wrap justify-start items-center mx-auto">
+		<a href="/" className="nav-item">
+			<img src="/favicon.png" height="30" width="37" alt=""/>
+		</a>
+		<a href="/docs" className="nav-item ml-[40%]">Docs</a>
+		<a href="/about" className="nav-item ml-[2%]">About</a>
+		<a href="/stdlib" className="nav-item ml-[2%]">Stdlib</a>	
+		<a href="https://github.com/tm-ahad/cream" className="nav-item ml-[2%]">
+            <img src="/github.png" height="30" width="37" alt=""/>
+        </a>	
+	</div>
+</nav>
+<script name="Navbar"></script>

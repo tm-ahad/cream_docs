@@ -1,0 +1,5 @@
+<Navbar></Navbar>
+<p>Home</p>
+<script name="Home">
+    import { Navbar } from "@src/components/navbar.cream"
+</script>

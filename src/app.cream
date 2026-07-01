@@ -1,0 +1,17 @@
+<script name="App">
+    import { Router } from "@std:router.ts"
+    import { mount as About } from "@src/about.cream"
+    import { mount as Home } from "@src/home.cream"
+    import { mount as Docs } from "@src/docs.cream"
+    import { mount as Stdlib } from "@src/stdlib.cream"
+    import { mount as NotFound } from "@src/not_found.cream"
+
+    let router = new Router()
+    router.setHandle("/", Home, true)
+    router.setHandle("/about", About, true)
+    router.setHandle("/docs", Docs, true)
+    router.setHandle("/stdlib", Stdlib, true)
+    router.setDefaultHandler(NotFound)
+
+    router.serve()
+</script>

@@ -1,0 +1,16 @@
+build = [
+    "src/app.cream",
+    "src/about.cream",
+    "src/home.cream",
+    "src/components/navbar.cream",
+    "src/not_found.cream",
+    "src/stdlib.cream",
+    "src/docs.cream",
+    "github.png",
+    "favicon.png"
+]
+port = 6767
+
+[packages]
+
+[env]

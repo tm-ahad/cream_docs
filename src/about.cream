@@ -1,0 +1,67 @@
+<Navbar></Navbar>
+
+<div className="section py-4 mt-2">
+    <div className="container mx-auto px-4">
+        <h2 id="introduction" className="text-2xl font-bold mb-4">Introduction</h2>
+        <p className="text-lg leading-relaxed text-gray-700">Cream simplifies frontend development by providing a straightforward way to write UI code using a declarative syntax. With Cream, you can create reactive user interfaces with minimal overhead, resulting in faster development cycles and more maintainable code.</p>
+        <p className="text-lg leading-relaxed text-gray-700">
+            Unlike many traditional frontend frameworks, Cream does not rely on a Virtual DOM. 
+            Instead of creating and diffing virtual trees before updating the page, 
+            Cream generates code that interacts directly with the DOM
+        </p>
+    </div>
+</div>
+
+<div className="section py-4">
+    <div className="container mx-auto px-4">
+        <h2 id="features" className="text-2xl font-bold mb-4">Features</h2>
+        <ul className="mt-4 list-disc list-inside">
+            <li><strong>Compiled JavaScript with Zero Abstraction</strong>: Cream generates JavaScript code without introducing too much unnecessary abstractions, resulting in efficient code.</li>
+            <li><strong>Reactive States Without Weird APIs</strong>: Cream provides reactive state management without relying on complex or unfamiliar APIs, making it easy to manage application state.</li>
+            <li><strong>Very Small JavaScript Script with Zero Dependencies</strong>: Cream produces lightweight JavaScript code with no external dependencies (unless the user explicitly requests them), ensuring fast load times and minimal overhead.</li>
+            <li><strong>Standard Library</strong>: Cream includes a standard library serving the user with necessary functions.</li>
+            <li><strong>Build Full-Stack Web Apps</strong>: Cream can be used to build full-stack web applications in conjunction with any backend framework, offering flexibility and interoperability.</li>
+            <li><strong>No runtime Required</strong>: Cream does not rely on any javascript runtime for its functionality, eliminating unnecessary dependencies and simplifying project setup.</li>
+            <li><strong>Blazingly Fast and Memory Safe</strong>: Cream is built with Rust, providing excellent performance, memory safety, and reliability.</li>
+            <li><strong>Native Typescript</strong>: Cream supports native typescript without explicitly using a runtime or the typescript compiler.</li>
+            <li><strong>No Bundler Required</strong>: Cream eliminates the need for bundlers, enabling simpler and more efficient build processes.</li>
+        </ul>
+    </div>
+</div>
+
+<div className="section py-4">
+    <div className="container mx-auto px-4">
+        <h2 id="installation" className="text-2xl font-bold mb-4">Installation</h2>
+        <p className="text-lg leading-relaxed text-gray-700">To install the latest version of Cream, run the following command in your terminal (make sure Rust is installed):</p>
+        <pre className="mt-2"><code className="lang-bash code">$ cargo install cream-js</code></pre>
+    </div>
+</div>
+
+<div className="section py-4">
+    <div className="container mx-auto px-4">
+        <h2 id="getting-started" className="text-2xl font-bold mb-4">Getting Started</h2>
+        <p className="text-lg leading-relaxed text-gray-700">To get started with Cream, follow these steps:</p>
+        <ol className="list-decimal list-inside mt-4">
+            <li>Install Cream using the provided installation script.</li>
+            <li>Create a new Cream project via running: </li>
+            <pre className="mt-2"><code className="lang-bash code">$ cream new *project_path*</code></pre>
+            <li>Write your frontend UI code using Cream's declarative syntax.</li>
+            <li>Compile your code via: </li>
+            <pre className="mt-2"><code className="lang-bash code">$ cream make </code></pre>
+            <li>Serve the build folder with index.html as the root or run:</li>
+            <pre className="mt-2"><code className="lang-bash code">$ cream serve </code></pre>
+        </ol>
+        <p className="text-lg leading-relaxed text-gray-700">For detailed documentation and usage examples, visit <a href="https://cream-dev.vercel.app" className="link">cream-dev.vercel.app</a>.</p>
+    </div>
+</div>
+
+<div className="section py-4">
+    <div className="container mx-auto px-4">
+        <h2 id="documentation" className="text-2xl font-bold mb-4">Documentation</h2>
+        <p className="text-lg leading-relaxed text-gray-700">For detailed documentation and usage examples, visit <a href="https://cream-dev.vercel.app" className="link">cream-dev.vercel.app</a>. The documentation covers various aspects of Cream, including installation instructions, language syntax, standard library APIs, and best practices for developing with Cream</p>
+    </div>
+</div>
+
+<script name="About">
+    import { Navbar } from "@src/components/navbar.cream"
+</script>
