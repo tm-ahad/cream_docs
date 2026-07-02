@@ -191,7 +191,8 @@
         </h2>
 
         <pre className="bg-gray-100 p-4 rounded-lg overflow-x-auto mb-8"><code>
-        &lt;button subscribe="[count]" on_click="inc"&gt;
+        &lt;div subscribe="[count]"&gt;
+        &lt;button on_click="inc"&gt;
         Count: ${"${count.value}"}
         &lt;/button&gt;
 
@@ -200,6 +201,7 @@
                 &lt;p&gt;High score!&lt;/p&gt;
             }
         &lt;/render&gt;
+        &lt;/div&gt;
         </code></pre>
 
         <h2 className="text-2xl font-semibold mb-4">
@@ -301,7 +303,7 @@
         }
     &lt;/script&gt;
 
-    &lt;button on_click="@increment" subscribe="[count]"&gt;
+    &lt;button on_click="increment" subscribe="[count]"&gt;
         Count: ${"${count}"}
     &lt;/button&gt;
     </code></pre>
