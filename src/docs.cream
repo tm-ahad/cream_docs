@@ -1,3 +1,4 @@
+
 <Navbar/>
 <div className="container mx-auto max-w-5xl mt-5">
     <div className="section">
@@ -504,4 +505,9 @@
 
 <script name="Docs">
     import { Navbar } from "@src/components/navbar.cream"
+    let start = performance.now()
+
+    onRender = () => {
+        console.log(performance.now()-start)
+    }
 </script>

@@ -1,14 +1,17 @@
 <nav className="bg-emerald-500 border-gray-200 sm:px-4 py-2">	
 	<div className="bg-emerald-500 container flex flex-wrap justify-start items-center mx-auto">
-		<a href="/cream_docs" className="nav-item">
+		<a on_click="function() {Router.visit('/cream_docs')}" className="nav-item">
 			<img src="/cream_docs/favicon.png" height="30" width="37" alt=""/>
 		</a>
-		<a href="/cream_docs/docs" className="nav-item ml-[40%]">Docs</a>
-		<a href="/cream_docs/about" className="nav-item ml-[2%]">About</a>
-		<a href="/cream_docs/stdlib" className="nav-item ml-[2%]">Stdlib</a>	
-		<a href="https://github.com/tm-ahad/cream" className="nav-item ml-[2%]">
+		<Link href='/cream_docs/docs' className="nav-item ml-[40%]">Docs</Link>
+		<Link href='/cream_docs/about' className="nav-item ml-[2.5%]">About</Link>
+		<Link href='/cream_docs/stdlib' className="nav-item ml-[2.5%]">Stdlib</Link>
+		<a href="https://github.com/tm-ahad/cream" className="nav-item ml-[2.5%]">
             <img src="/cream_docs/github.png" height="30" width="37" alt=""/>
         </a>	
 	</div>
 </nav>
-<script name="Navbar"></script>
+<script name="Navbar">
+	import { Router } from "@std:router.ts"
+	import { Link } from "@std:link.cream"
+</script>

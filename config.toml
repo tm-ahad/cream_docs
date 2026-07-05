@@ -1,6 +1,7 @@
 build = [
     "src/app.cream",
     "src/about.cream",
+    "src/components/link.cream",
     "src/home.cream",
     "src/components/navbar.cream",
     "src/not_found.cream",

@@ -1,3 +1,4 @@
+
 <script name="App">
     import { Router } from "@std:router.ts"
     import { mount as About } from "@src/about.cream"
